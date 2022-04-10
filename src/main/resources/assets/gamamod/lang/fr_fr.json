@@ -1,6 +1,10 @@
 {
 
   "item.gamamod.skateboard": "Skateboard",
+  "item.gamamod.skateboard_deck": "Planche de Skateboard",
+  "item.gamamod.wheel": "Roue",
+  "item.gamamod.trucks": "Trucks",
+  "item.gamamod.screw": "Visse",
 
 
   "itemGroup.skateboard_tab": "Skateboard"
