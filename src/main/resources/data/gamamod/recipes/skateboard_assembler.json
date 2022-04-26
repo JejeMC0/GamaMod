@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#P#",
+    "E#E",
+    "I I"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:red_concrete"
+    },
+    "P": {
+      "tag": "minecraft:planks"
+    },
+    "E": {
+      "item": "minecraft:white_concrete"
+    },
+    "I": {
+      "item": "minecraft:black_concrete"
+    }
+  },
+  "result": {
+    "item": "gamamod:skateboard_assembler"
+  }
+}

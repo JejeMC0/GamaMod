@@ -2,6 +2,7 @@ package fr.jeje.gamamod.block;
 
 import fr.jeje.gamamod.CreativeTab.ModCreativeModeTab;
 import fr.jeje.gamamod.GamaMod;
+import fr.jeje.gamamod.block.custom.Asphalt_block;
 import fr.jeje.gamamod.block.custom.Skateboard_assembler;
 import fr.jeje.gamamod.item.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -23,8 +24,13 @@ public class ModBlocks {
 
 
     public static final RegistryObject<Block> SKATEBOARD_ASSEMBLER = registerBlock("skateboard_assembler",
-            () -> new Skateboard_assembler(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
+            () -> new Skateboard_assembler(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion().strength(7f)),
             ModCreativeModeTab.SKATEBOARD_TAB);
+
+    public static final RegistryObject<Block> ASPHALT_BLOCK = registerBlock("asphalt_block",
+            () -> new Asphalt_block(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion().strength(5f)),
+            ModCreativeModeTab.SKATEBOARD_TAB);
+
 
 
 
