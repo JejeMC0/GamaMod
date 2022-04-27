@@ -2,9 +2,12 @@ package fr.jeje.gamamod;
 
 
 import com.mojang.logging.LogUtils;
-
 import fr.jeje.gamamod.block.ModBlocks;
+import fr.jeje.gamamod.block.entity.ModBlockEntities;
 import fr.jeje.gamamod.item.ModItems;
+import fr.jeje.gamamod.screen.ModMenuTypes;
+import fr.jeje.gamamod.screen.SkateboardAssemblerScreen;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.Blocks;
@@ -30,7 +33,13 @@ public class GamaMod {
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
 
+        ModBlockEntities.register(eventBus);
+        ModMenuTypes.register(eventBus);
+
+
+
         eventBus.addListener(this::setup);
+        eventBus.addListener(this::clientSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -38,6 +47,9 @@ public class GamaMod {
 
     private void clientSetup(final FMLCommonSetupEvent event){
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.SKATEBOARD_ASSEMBLER.get(), RenderType.cutout());
+
+
+        MenuScreens.register(ModMenuTypes.SKATEBOARD_ASSEMBLER_MENU.get(), SkateboardAssemblerScreen::new);
 
 
     }
